@@ -1,0 +1,32 @@
+<div class="row">    
+        <h2 class="col-md-12 text-center">Student List</h2>   
+</div>
+<div>       
+   <table border="2" cellpadding="15">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tbody>
+                <tr *ngFor="let student of students">
+                    <td>
+                        {{student.first_name}}
+                    </td>
+                    <td>
+                        {{student.last_name}}
+                    </td>
+                    <td>
+                        {{student.email}}
+                    </td>
+                    <td><a [routerLink]="['/edit-student',student._id]">Edit</a>
+                    <td><button (click)="ondelete(student)">Delete</button></td>
+                </tr>
+        </tbody>
+   </table>
+</div>
+
+
+

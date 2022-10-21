@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h2>Edit-Student</h2>
+
+    </div>
+    <div class="row">
+        <form [formGroup]="editStudent" (ngSubmit)="UpdateData()">
+            First Name
+            <input type="text" formControlName="first_name" [(ngModel)]="student.first_name">
+            <br /><br />
+            Last Name
+            <input type="text" formControlName="last_name" [(ngModel)]="student.last_name">
+            <br /><br />
+            Email
+            <input type="email" formControlName="email" [(ngModel)]="student.email">
+            <br /><br />
+            <input type="hidden" [(ngModel)]="student._id" formControlName="_id">
+
+            <button type="submit" (click)="UpdateData()">Submit Form</button>
+        </form>
+    </div>
+
+
+</div>

@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h2>Add-Student</h2>
+
+    </div>
+    <div>
+        <form [formGroup]="addStudent" novalidate>
+
+            First Name
+            <input type="text" formControlName="first_name">
+            <br /><br />
+
+            Last Name
+            <input type="text" formControlName="last_name">
+
+            <br /><br />
+            Email
+            <input type="email" formControlName="email">
+            <br /><br />
+            Password
+            <input type="password" formControlName="password">
+            <br /><br />
+
+            <button type="submit" (click)="onSubmit()">Submit Form</button>
+
+        </form>
+    </div>
+
+
+</div>
